@@ -8,12 +8,22 @@ fieldset {
     justify-content: center;
 }
 
+.images {
+    width: 40%;
+    margin: 20px;
+}
+
 .formDiv {
     padding-top: 20px;
     margin-bottom: 20px;
     display: flex;
     justify-content:center;
     align-items: baseline;
+}
+
+#postFormDiv {
+    background-color: lightgray;
+    padding-bottom: 20px;
 }
 
 .button {

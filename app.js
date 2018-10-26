@@ -18,7 +18,7 @@ function displayImages (imageNames) {
     for (let i = 0; i < imageNames.length; i++) {
         const name = imageNames[i];
         console.log(name);
-        outputString += `<img src="uploads/${name}" style="width: 300px; margin: 20px;" />`;
+        outputString += `${cssLink} <img src="uploads/${name}" id="images" />`;
     }
     return outputString;
 }
@@ -52,7 +52,7 @@ app.post("/uploads", upload.single("myFile"), function (req, res) {
     uploadedFiles.push(req.file.filename);
     res.send(`
     ${cssLink}
-    <div class="formDiv">
+    <div class="formDiv" id="postFormDiv">
         <h1 class="title">Upload Successful</h1>
         <button class="button">
             <a href="/" id="link">Back</button>
